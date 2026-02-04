@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Malpractice Tail Risk Analytics | Khushi Saraswat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Global theme -->
+  <link rel="stylesheet" href="../styles_enhanced.css" />
+
+  <!-- Page-specific styles (use your project page css) -->
+  <link rel="stylesheet" href="./project3_e.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+  <div class="container">
+
+    <!-- brand removed (optional) -->
+    <!-- <a class="navbar-brand" href="../index-enhanced.html">KHUSHI</a> -->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html#home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#projects">PROJECTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#contact">CONTACT</a></li> 
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <main class="proj">
+
+    <!-- HERO -->
+    <header class="proj-hero">
+      <div class="proj-hero-inner">
+        <a class="proj-back" href="../index.html#projects">
+          <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <h1 class="proj-title">Medical Malpractice Claims — Tail Risk Analytics & High-Cost Prediction</h1>
+
+        <p class="proj-subtitle">
+          Built interactive dashboards and a predictive model to identify the small share of malpractice claims
+          driving a disproportionate share of total payout.
+        </p>
+
+        <div class="proj-actions">
+          <a class="btn-solid" href="#" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD SNAPSHOTS -->
+    <section class="proj-section">
+      <div class="proj-wrap">
+        <h2 class="section-h">Dashboard Snapshots</h2>
+
+        <div class="dash-carousel" aria-label="Dashboard screenshots">
+          <button class="dash-arrow dash-arrow-left" type="button" aria-label="Scroll left">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="dash-track" id="dashTrack">
+            <figure class="dash-slide">
+              <img
+                src="../assets_1/dashboard snapshots/medical_1.png"
+                alt="Claims overview dashboard"
+                data-caption="Dashboard 1 — Claims Overview: Descriptive view of claim distribution, severity mix, specialties, insurance type, and demographic patterns to establish baseline risk concentration."
+              />
+            </figure>
+
+            <figure class="dash-slide">
+              <img
+                src="../assets_1/dashboard snapshots/medical_2.png"
+                alt="Payment drivers dashboard"
+                data-caption="Dashboard 2 — Payment Drivers: Compares payments across severity, attorney involvement, specialty, and demographics to isolate factors associated with higher financial impact."
+              />
+            </figure>
+
+            <figure class="dash-slide">
+              <img
+                src="../assets_1/dashboard snapshots/medical_3.png"
+                alt="High-cost tail risk dashboard"
+                data-caption="Dashboard 3 — High-Cost Claims (Tail Risk): Profiles the top 10% of claims and shows how tail risk concentrates by severity, specialty, and attorney involvement (~43% of total payout)."
+              />
+            </figure>
+          </div>
+
+          <button class="dash-arrow dash-arrow-right" type="button" aria-label="Scroll right">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Caption auto-updates -->
+        <p class="dash-caption" id="dashCaption">
+          Dashboard 1 — Claims Overview: Descriptive view of claim distribution, severity mix, specialties, insurance type, and demographic patterns to establish baseline risk concentration.
+        </p>
+
+        <p class="dash-hint">
+          <i class="fa-solid fa-arrows-left-right"></i> Swipe/scroll to view all three dashboards
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTEXT + BUSINESS PROBLEM -->
+    <section class="proj-section">
+      <div class="proj-wrap grid-2">
+
+        <div class="card">
+          <h2 class="card-h">Context</h2>
+          <p>
+            Medical malpractice payments represent a major financial burden in healthcare systems.
+            In practice, a small subset of claims often drives a large share of total cost.
+            Understanding where those high-cost cases originate is critical for risk management,
+            insurance planning, and legal strategy.
+          </p>
+          <p>
+            This project analyzes historical malpractice payment data to uncover patterns behind financially extreme claims
+            and to build an early-warning predictive model.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-h">Business Problem</h2>
+          <p>
+            Organizations need to anticipate which claims may escalate into high-cost outcomes.
+            Traditional reporting focuses on averages, which masks tail risk.
+          </p>
+          <ul class="bullets">
+            <li>Identify early indicators of high-cost claims (tail risk)</li>
+            <li>Support proactive allocation of legal and risk resources</li>
+            <li>Improve visibility into specialties and contexts with elevated loss exposure</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ANALYTICAL APPROACH + RESULTS -->
+    <section class="proj-section">
+      <div class="proj-wrap grid-2">
+
+        <div class="card">
+          <h2 class="card-h">Analytical Approach</h2>
+
+          <h3 class="subhead">1) Data Preparation</h3>
+          <ul class="bullets">
+            <li>Analyzed ~79,000 paid malpractice claims across severity, specialty, insurance type, attorney involvement, and demographics.</li>
+            <li>Ranked claims by payment amount and labeled the top 10% as <b>High-Cost</b> (binary tail-risk target).</li>
+            <li>Designed the modeling target to represent financially extreme cases without using payment amount as an input (prevents leakage).</li>
+          </ul>
+
+          <h3 class="subhead">2) Exploratory Dashboards</h3>
+          <p>Built three Power BI dashboards to:</p>
+          <ul class="bullets">
+            <li>Establish baseline claim distribution and concentration patterns</li>
+            <li>Identify payment drivers across clinical and legal factors</li>
+            <li>Isolate and profile high-cost claims to understand tail-risk clustering</li>
+          </ul>
+          <p>
+            These exploratory views guided feature selection and informed how risk concentrates in specific clinical and legal contexts.
+          </p>
+
+          <h3 class="subhead">3) Predictive Modeling</h3>
+          <ul class="bullets">
+            <li>Trained a <b>logistic regression</b> classifier to predict whether a claim falls into the High-Cost group.</li>
+            <li>Tuned the decision threshold to balance sensitivity and false alarms, selecting a cutoff around <b>0.60</b>.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-h">Results</h2>
+          <ul class="bullets">
+            <li><b>Tail risk confirmed:</b> Top 10% of claims account for ~43% of total paid amount.</li>
+            <li><b>Key risk signals:</b> High-cost claims correlate strongly with elevated severity and private attorney involvement.</li>
+            <li><b>Concentration patterns:</b> Certain specialty categories appear more frequently within the high-cost segment.</li>
+            <li><b>Strong model performance:</b> ROC-AUC ≈ 0.93 (strong ranking capability).</li>
+            <li><b>Operationally useful threshold:</b> At 0.60 cutoff, captures ~85% of high-cost claims while reducing false positives vs. default.</li>
+          </ul>
+
+          <p>
+            The model functions as an <b>early-warning screening tool</b> (not a final decision engine),
+            helping risk teams prioritize review and intervention for claims likely to escalate.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER CTA (optional; keep if you want) -->
+    <section class="proj-footer">
+      <div class="proj-wrap footer-inner">
+        <h2 class="footer-h">Want the full walkthrough?</h2>
+        <p class="footer-p">I can share how each insight was derived and how the model threshold was selected.</p>
+        <a class="btn-solid" href="../index.html#about">
+          <i class="fa-solid fa-user"></i> About Me
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Caption + arrows -->
+  <script>
+    (function () {
+      const track = document.getElementById("dashTrack");
+      const captionEl = document.getElementById("dashCaption");
+      if (!track || !captionEl) return;
+
+      const imgs = Array.from(track.querySelectorAll(".dash-slide img"));
+      const prev = document.querySelector(".dash-arrow-left");
+      const next = document.querySelector(".dash-arrow-right");
+
+      let currentIndex = -1;
+      let scrollTimer = null;
+
+      function getClosestIndex() {
+        const trackRect = track.getBoundingClientRect();
+        const trackCenter = trackRect.left + trackRect.width / 2;
+
+        let closestIdx = 0;
+        let minDist = Infinity;
+
+        imgs.forEach((img, idx) => {
+          const r = img.getBoundingClientRect();
+          const imgCenter = r.left + r.width / 2;
+          const dist = Math.abs(imgCenter - trackCenter);
+          if (dist < minDist) {
+            minDist = dist;
+            closestIdx = idx;
+          }
+        });
+
+        return closestIdx;
+      }
+
+      function setCaption(index, animate = true) {
+        if (index === currentIndex) return;
+        currentIndex = index;
+
+        const newText = imgs[index]?.dataset?.caption || "";
+        if (!newText) return;
+
+        if (!animate) {
+          captionEl.textContent = newText;
+          captionEl.style.opacity = "1";
+          return;
+        }
+
+        captionEl.style.opacity = "0";
+        setTimeout(() => {
+          captionEl.textContent = newText;
+          captionEl.style.opacity = "1";
+        }, 140);
+      }
+
+      function updateCaptionDebounced() {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => setCaption(getClosestIndex(), true), 120);
+      }
+
+      function scrollBySlide(dir) {
+        const w = track.clientWidth;
+        track.scrollBy({ left: dir * w, behavior: "smooth" });
+
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => setCaption(getClosestIndex(), true), 260);
+      }
+
+      prev?.addEventListener("click", () => scrollBySlide(-1));
+      next?.addEventListener("click", () => scrollBySlide(1));
+      track.addEventListener("scroll", updateCaptionDebounced, { passive: true });
+
+      // init
+      setCaption(getClosestIndex(), false);
+    })();
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

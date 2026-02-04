@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project | Khushi Saraswat</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- homepage base styles (navbar + fonts + base spacing) -->
+  <link rel="stylesheet" href="../styles_enhanced.css" />
+ 
+  <!-- page-specific styles (colors + layout for this project only) -->
+  <link rel="stylesheet" href="./project3_e.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+  <div class="container">
+
+    <!-- brand removed (optional) -->
+    <!-- <a class="navbar-brand" href="../index-enhanced.html">KHUSHI</a> -->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html#home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#projects">PROJECTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#contact">CONTACT</a></li> 
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <main class="proj">
+
+    <!-- HERO -->
+    <header class="proj-hero">
+      <div class="proj-hero-inner">
+        <a class="proj-back" href="../index.html#projects">
+          <i class="fa-solid fa-arrow-left"></i> Back to Projects
+        </a>
+
+        <h1 class="proj-title">Telecom Customer Churn & Retention Analysis</h1>
+        <p class="proj-subtitle">
+          Analyzed customer churn and retention patterns using interactive Power BI dashboards to identify risk drivers, retention strengths, and opportunities for proactive customer management.
+        </p>
+
+        <div class="proj-actions">
+          <a class="btn-solid" href="#" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i> View Code
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- DASHBOARD PREVIEW -->
+<section class="proj-section">
+  <div class="proj-wrap">
+    <h2 class="section-h">Dashboard Snapshot</h2>
+
+    <div class="dash-carousel" aria-label="Dashboard screenshots">
+      <button class="dash-arrow dash-arrow-left" type="button" aria-label="Scroll left">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="dash-track" id="dashTrack">
+        <figure class="dash-slide">
+          <img
+            src="../assets_1/dashboard snapshots/Telecom_Churn_Analysis.png"
+            alt="Telecom churn analysis dashboard"
+            data-caption="Churn Analysis: Focused on identifying who is leaving, when, and why."
+          />
+        </figure>
+
+        <figure class="dash-slide">
+          <img
+            src="../assets_1/dashboard snapshots/Telecom_Retention_Analysis.png"
+            alt="Telecom retention analysis dashboard"
+            data-caption="Retention Analysis: Focused on understanding who stays and what drives loyalty."
+          />
+        </figure>
+      </div>
+
+      <button class="dash-arrow dash-arrow-right" type="button" aria-label="Scroll right">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- ✅ Caption that changes based on which slide is centered -->
+    <p class="dash-caption" id="dashCaption">
+      Churn Analysis: Identifies who is leaving, when churn spikes, and the key drivers behind churn risk.
+    </p>
+
+    <p class="dash-hint">
+      <i class="fa-solid fa-arrows-left-right"></i> Swipe/scroll to view both screenshots
+    </p>
+  </div>
+</section>
+
+
+    <!-- 2-COLUMN GRID -->
+    <section class="proj-section">
+      <div class="proj-wrap grid-2">
+
+        <!-- LEFT: Business Questions -->
+        <div class="card">
+          <h2 class="card-h">Analytical Approach</h2>
+          <ul class="bullets">
+            <li>Designed dashboards around customer lifecycle stages: churn vs. retention</li>
+            <li>Analyzed customers across tenure, contract type, services, and pricing</li>
+            <li>Used segmentation by demographics, service adoption, and billing patterns</li>
+            <li>Enabled drill-down analysis to support root-cause identification and decision-making</li>
+          </ul>
+        </div>
+
+        <!-- RIGHT: KPI Snapshot -->
+        <div class="card">
+          <h2 class="card-h">KPI Snapshot</h2>
+
+          <div class="kpi-grid">
+            <div class="kpi">
+              <div class="kpi-label">Total Customers</div>
+              <div class="kpi-value">7,043</div>
+            </div>
+
+            <div class="kpi">
+              <div class="kpi-label">Churned Customers</div>
+              <div class="kpi-value">1,869</div>
+            </div>
+
+            <div class="kpi">
+              <div class="kpi-label">Churn Rate</div>
+              <div class="kpi-value">26.54%</div>
+            </div>
+
+            <div class="kpi">
+              <div class="kpi-label">Retained Customers</div>
+              <div class="kpi-value">5,174</div>
+            </div>
+
+            <div class="kpi">
+              <div class="kpi-label">Retention Rate</div>
+              <div class="kpi-value">73.5%</div>
+            </div>
+
+            
+
+            
+
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2-COLUMN: Approach + Key Findings -->
+    <section class="proj-section">
+      <div class="proj-wrap grid-2">
+
+        <div class="card">
+          <h2 class="card-h">Business Questions</h2>
+          <ul class="bullets">
+            <li>Which customers are most likely to churn?</li>
+            <li>How do contract type, tenure, and services influence churn risk?</li>
+            <li>What distinguishes retained customers from churned customers?</li>
+            <li>Which customer segments represent the highest retention opportunity?</li>
+            <li>How do pricing and service adoption impact customer loyalty?</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-h">Dashboard 1 — Churn Analysis Insights</h2>
+          <ul class="bullets">
+            <li>Month-to-month contracts drive the highest churn, far exceeding one-year and two-year contracts.</li>
+            <li>Customers with short tenure (< 1 year) show the highest churn risk, indicating early-lifecycle vulnerability.</li>
+            <li>CFiber optic customers churn at a significantly higher rate compared to DSL and non-internet users.</li>
+            <li>Churn is evenly distributed by gender, suggesting churn is driven by service and contract factors rather than demographics.</li>
+            <li>Customers using multiple services (streaming, phone, add-ons) still churn at high rates, highlighting experience or pricing issues rather than lack of engagement.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="proj-section">
+      <div class="proj-wrap grid-2">
+
+        <div class="card">
+          <h2 class="card-h">Dashboard 2 — Retention Analysis Insights</h2>
+          <ul class="bullets">
+            <li>73.5% of customers are retained, with the strongest retention seen among long-tenure customers.</li>
+            <li>Customers in the 6–12 month and 0–12 month tenure groups form the largest retained segments, indicating stabilization after early onboarding.</li>
+            <li>Two-year contract customers show stronger retention compared to shorter contract types.</li>
+            <li>Retained customers exhibit high adoption of core services, especially phone service and internet.</li>
+            <li>Retention is strongest in mid-range pricing tiers, while very low and very high monthly charges show weaker stability.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-h">Combined Business Interpretation</h2>
+          <ul class="bullets">
+            <li>Identifies high-risk churn segments early based on tenure and contract type.</li>
+            <li>Highlights retention levers, such as longer contracts and bundled services.</li>
+            <li>Supports targeted retention strategies for fiber-optic and short-tenure customers.</li>
+            <li>Enables telecom teams to move from reactive churn reporting to proactive retention planning.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER CTA -->
+    <section class="proj-footer">
+      <div class="proj-wrap footer-inner">
+        <h2 class="footer-h">Want the full walkthrough?</h2>
+        <p class="footer-p">I can share the Power BI navigation and how each insight was derived.</p>
+        <a class="btn-solid" href="../index.html#about">
+          <i class="fa-solid fa-user"></i> About Me
+        </a>
+      </div>
+    </section>
+
+  </main>
+<script>
+  (function () {
+    const track = document.getElementById("dashTrack");
+    const captionEl = document.getElementById("dashCaption");
+    if (!track || !captionEl) return;
+
+    const imgs = Array.from(track.querySelectorAll(".dash-slide img"));
+    const prev = document.querySelector(".dash-arrow-left");
+    const next = document.querySelector(".dash-arrow-right");
+
+    let currentIndex = -1;     // prevents re-animating same caption
+    let scrollTimer = null;
+
+    function getClosestIndex() {
+      const trackRect = track.getBoundingClientRect();
+      const trackCenter = trackRect.left + trackRect.width / 2;
+
+      let closestIdx = 0;
+      let minDist = Infinity;
+
+      imgs.forEach((img, idx) => {
+        const r = img.getBoundingClientRect();
+        const imgCenter = r.left + r.width / 2;
+        const dist = Math.abs(imgCenter - trackCenter);
+        if (dist < minDist) {
+          minDist = dist;
+          closestIdx = idx;
+        }
+      });
+
+      return closestIdx;
+    }
+
+    function setCaption(index, animate = true) {
+      if (index === currentIndex) return; // ✅ key: no duplicate blink
+      currentIndex = index;
+
+      const newText = imgs[index]?.dataset?.caption || "";
+      if (!newText) return;
+
+      if (!animate) {
+        captionEl.textContent = newText;
+        captionEl.style.opacity = "1";
+        return;
+      }
+
+      // single clean fade (no double)
+      captionEl.style.opacity = "0";
+      setTimeout(() => {
+        captionEl.textContent = newText;
+        captionEl.style.opacity = "1";
+      }, 140);
+    }
+
+    function updateCaptionDebounced() {
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        setCaption(getClosestIndex(), true);
+      }, 120); // ✅ debounce: updates once after user stops scrolling
+    }
+
+    function scrollBySlide(dir) {
+      const w = track.clientWidth;
+      track.scrollBy({ left: dir * w, behavior: "smooth" });
+
+      // After smooth scroll settles, update caption ONCE
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        setCaption(getClosestIndex(), true);
+      }, 260);
+    }
+
+    // arrows
+    prev?.addEventListener("click", () => scrollBySlide(-1));
+    next?.addEventListener("click", () => scrollBySlide(1));
+
+    // scroll
+    track.addEventListener("scroll", updateCaptionDebounced, { passive: true });
+
+    // init (no animation on load)
+    setCaption(getClosestIndex(), false);
+  })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

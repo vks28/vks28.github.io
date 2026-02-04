@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title | Khushi</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Your main stylesheet -->
+  <link rel="stylesheet" href="../styles_enhanced.css" />
+
+  <!-- Font Awesome (icons) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+  <!-- Background -->
+
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+  <div class="container">
+
+    <!-- brand removed (optional) -->
+    <!-- <a class="navbar-brand" href="../index-enhanced.html">KHUSHI</a> -->
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="../index.html#home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#projects">PROJECTS</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#about">ABOUT</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#contact">CONTACT</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+ 
+
+
+
+
+  <!-- Main content -->
+  <main class="project-page">
+
+    <!-- Header -->
+    <header class="project-hero">
+      <div class="project-hero-inner">
+        <a class="project-back" href="../index.html#projects">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Projects
+        </a>
+
+        <h1 class="project-title">Synthetic Vehicle Damage Data Generation for Insurance AI</h1>
+        <p class="project-subtitle">
+        Designed a scalable AI pipeline to generate realistic vehicle damage images, helping insurance systems better identify and assess damage when real-world data is limited.
+        </p>
+
+
+        <div class="project-links">
+          <a class="btn-primary" href="https://github.com/vks28/Capstone-Vehicle-Claim-Generation" target="_blank" rel="noreferrer">
+            <i class="fa-brands fa-github"></i> View Code
+          </a>
+          <a class="btn-ghost" href="../Projects_e/project_video_Car_e.html" target="_blank" rel="noreferrer">
+            <i class="fa-solid fa-up-right-from-square"></i> Live / Report
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- Content grid -->
+    <section class="project-content">
+      <div class="content-grid">
+
+        <!-- Left column: main story -->
+        <div class="content-main">
+
+          <div class="content-block">
+            <h2>Overview</h2>
+            <p>
+              This project addresses data scarcity in AI-driven vehicle damage assessment by generating high-quality synthetic car damage images. 
+              Using Stable Diffusion fine-tuned with LoRA and a Mixture of Experts (MoE) approach, 
+              we created a scalable pipeline that enables controlled generation of damage types and severity levels. 
+              The resulting synthetic data helps overcome limitations of real-world datasets and supports more reliable training of damage detection models
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h2>Business Problem</h2>
+            <ul>
+              <li><b><i>  Limited and imbalanced training data:</i></b> Real-world vehicle damage datasets are small, biased, and lack rare damage types, reducing the reliability of AI damage assessment models.</li>
+
+            <li><b><i>  High cost of manual data collection:</i></b> Collecting and labeling large volumes of damage images is expensive and time-consuming, especially for uncommon damage scenarios.</li>
+
+            <li><b><i>Barriers to scalable automation:</i></b> Insufficient training data limits the ability to build accurate, scalable, and automated damage assessment systems for insurance claims.</li>
+            </ul>
+          </div>
+
+          <div class="content-block">
+            <h2>Results</h2>
+            <ul>
+              <li>Successfully generated realistic synthetic images across multiple vehicle damage categories with controllable severity levels</li>
+              <li>Demonstrated that LoRA-based fine-tuning enables efficient specialization without full model retraining</li>
+              <li>Validated the feasibility of synthetic data as a supplement to real-world datasets using FID-based evaluation</li>
+              <li>Enabled broader coverage of rare damage scenarios, supporting more robust training of downstream damage detection models</li>
+            </ul>
+          </div>
+     
+          <div class="shots-grid">
+  <a class="shot" href="../assets_1/Gen AI Data project files/ss1.png" target="_blank" rel="noreferrer">
+    <img src="../assets_1/Gen AI Data project files/ss1.png" alt="Screenshot 1">
+  </a>
+
+  <a class="shot" href="../assets_1/Gen AI Data project files/ss2.png" target="_blank" rel="noreferrer">
+    <img src="../assets_1/Gen AI Data project files/ss2.png" alt="Screenshot 2">
+  </a>
+
+  <a class="shot" href="../assets_1/Gen AI Data project files/ss3.png" target="_blank" rel="noreferrer">
+    <img src="../assets_1/Gen AI Data project files/ss3.png" alt="Screenshot 3">
+  </a>
+</div>
+</div>
+
+        <!-- Right column: quick facts -->
+        <aside class="content-side">
+          <div class="side-card">
+            <h3>Project Snapshot</h3>
+
+            <div class="side-row">
+              <span class="side-label">Domain</span>
+              <span class="side-value">GEN AI / Computer Vision / Insurance Analytics</span>
+            </div>
+             <div class="side-row">
+              <span class="side-label">Tools</span>
+              <span class="side-value">Python, Stable Diffusion 1.5, LoRA, MoE, Hugging Face</span>
+            </div>
+            <div class="side-row">
+              <span class="side-label">Deliverable</span>
+              <span class="side-value">Synthetic image generation pipeline + evaluation</span>
+            </div>
+          </div>
+           <div class="side-card">
+  <h3>Approach</h3>
+  <ul class="side-list">
+    <li>Curated damage-specific subsets from the CarDD dataset</li>
+    <li>Generated image–text pairs using a vision-language model</li>
+    <li>Fine-tuned Stable Diffusion 1.5 with LoRA adapters</li>
+    <li>Applied Mixture of Experts for controlled generation</li>
+    <li>Evaluated outputs using FID and visual inspection</li>
+  </ul>
+</div>
+
+
+   </aside>
+
+
+
+
+
+
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="project-cta">
+      <div class="cta-inner">
+        <h2>Want to talk about this project?</h2>
+        <p>Reach out and I’ll walkthrough the project.</p>
+        <a class="btn-primary" href="../index.html#contact">
+          <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+      </div>
+    </section>
+
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
